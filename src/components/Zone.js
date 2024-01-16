@@ -19,7 +19,7 @@ const Zone = ({ville,chooseZone}) => {
   useEffect(() => {
     const fetchZones = async () => {
       
-      const res = await fetch('http://localhost:9090/villes/zones/'+ville)
+      const res = await fetch('https://raspy-pickle-production.up.railway.app/villes/zones/'+ville)
       const result = await res.json()
       setZones(result)
     }

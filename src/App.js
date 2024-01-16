@@ -31,24 +31,24 @@ function App() {
   
   useEffect(() => {
     const fetchPharmacy = async () => {
-      const res = await fetch('http://localhost:9090/zones/pharmacies/'+selected_zone)
+      const res = await fetch('https://raspy-pickle-production.up.railway.app/zones/pharmacies/'+selected_zone)
       const result = await res.json()
       setPharmacyData(result)
       
     }
     const fetchPharmacyJour = async () => {
-      const res = await fetch('http://localhost:9090/pharmacieDeGardes/getActual/jour/'+selected_zone)
+      const res = await fetch('https://raspy-pickle-production.up.railway.app/pharmacieDeGardes/getActual/jour/'+selected_zone)
       const result = await res.json()
       setPharmacyJour(result)
     }
     const fetchPharmacyNuit = async () => {
-      const res = await fetch('http://localhost:9090/pharmacieDeGardes/getActual/nuit/'+selected_zone)
+      const res = await fetch('https://raspy-pickle-production.up.railway.app/pharmacieDeGardes/getActual/nuit/'+selected_zone)
       const result = await res.json()
       setPharmacyNuit(result)
       console.log(result)
     }
     const fetchVille = async () => { 
-      const res = await fetch('http://localhost:9090/villes/all')
+      const res = await fetch('https://raspy-pickle-production.up.railway.app/villes/all')
       const result = await res.json()
       setVille(result)
     }
